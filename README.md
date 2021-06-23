@@ -1,3 +1,13 @@
+
+## Tasks
+
+---
+
+> Design the Portfolio box and make it look like the way it  is described in the project.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
