@@ -1,13 +1,16 @@
-
 ## Tasks
 
 ---
 
-> Have the user type out a stock symbol and click on the search button. Then display the search result on the UI
-
-> User should be able to click on the buy button and that should send an API request out to the create a row in the table (This task Depends on you completing a task in the API list first )
-
 >  Show all the stocks that you own in your portfolio in the table on the right hand side. HINT Make a fetch call on page load or use useEffect.
+
+> When a user clicks on sell in the portfolio table. Send a DELETE fetch request to the backend and remove the stock. Also reload the portfolio table afterwards.  
+
+> Make sure that there is no $ symbol on page load
+
+> ~~Have the user type out a stock symbol and click on the search button. Then display the search result on the UI~~
+
+> ~~User should be able to click on the buy button and that should send an API request out to the create a row in the table (This task Depends on you completing a task in the API list first )~~
 
 > ~~Design the Portfolio box and make it look like the way it  is described in the project.~~
 
