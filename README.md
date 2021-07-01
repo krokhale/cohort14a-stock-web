@@ -2,6 +2,11 @@
 ## Tasks
 
 ---
+> Show all the stocks that you own in your portfolio in the table on the right hand side. HINT Make a fetch call on page load or use useEffect.
+
+> When a user clicks on sell in the portfolio table. Send a DELETE fetch request to the backend and remove the stock. Also reload the portfolio table afterwards.
+
+> Make sure that there is no $ symbol on page load
 
 > Design the Portfolio box and make it look like the way it  is described in the project.
 
