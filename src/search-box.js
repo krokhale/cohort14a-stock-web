@@ -19,7 +19,7 @@ function SearchBox(props) {
 
     const searchStock = async () => {
         // template literals - javascript
-        let res = await fetch(`http://localhost:3000/api/v1/search/${stockSymbol}`) // GET request by default
+        let res = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/search/${stockSymbol}`) // GET request by default
         let data = await res.json()
         console.log('data is', data)
         setResult({symbol: stockSymbol, price: data.price})
@@ -27,7 +27,7 @@ function SearchBox(props) {
 
     const buyStock = async () => {
         let info = {symbol: result.symbol, quantity: quantity, price: result.price}
-        let res = await fetch('http://localhost:3000/api/v1/portfolio', {
+        let res = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/portfolio`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -46,6 +46,8 @@ function SearchBox(props) {
         <>
             <div className={'col-span-12 md:col-span-7 border h-96 p-10'}>
                 {/*<h1 className={'text-4xl'}>Search Box</h1>*/}
+
+                <p>{process.env.REACT_APP_API_URL}</p>
 
 
                 <div className={'grid grid-cols-12'}>
