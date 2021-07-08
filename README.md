@@ -8,7 +8,7 @@
 
 > Make sure that there is no $ symbol on page load
 
-> Design the Portfolio box and make it look like the way it  is described in the project.
+~~ Design the Portfolio box and make it look like the way it  is described in the project.
 
 
 
