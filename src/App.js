@@ -6,7 +6,7 @@ import SearchBox from './searchbox';
 function App() {
   return (
 
-      <div className={'grid grid-cols-12 font-mono'}>
+      <div className={'grid grid-cols-12 font-mono h-100 p-5'}>
 
           <Navbar></Navbar>
 
