@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
@@ -34,15 +34,16 @@ const PortfolioBox = () => {
     }
 
     const renderBody = () => {
-        return portfolio && portfolio.map(({ id, symbol, quantity, price }) => {
+        return portfolio && portfolio.map(({id, symbol, quantity, price }) => {
+            console.log(portfolio);
             return (
                 <tr key={id}>
                     <td>{id}</td>
                     <td>{symbol}</td>
                     <td>{quantity}</td>
                     <td>{price}</td>
-                    <td className='opration'>
-                        <button className='button-sm px-4  hover:bg-red-300 text-white rounded py-2 mr-1' onClick={() => removeData(id)}>Sell</button>
+                    <td className='operation'>
+                        <button className='button-sm px-4 hover:bg-red-300 text-white rounded py-2 mr-1' onClick={() => removeData(id)}>Sell</button>
                     </td>
                 </tr>
             )
@@ -55,15 +56,15 @@ const PortfolioBox = () => {
 
                 <h1 className={'text-4xl text-center p-8'} id='title'>Stock Portfolio</h1>
                 <div className={'grid grid-cols-12 p-10'}>
-                    
-                        <table className={'col-span-3 border border-white p-2 bg-gray-700 w-80'} id='employee'>
-                            <thead className={' text-center font-bold p-2 uppercase text-sm '} >
-                                <tr>{renderHeader()}</tr>
-                            </thead>
-                            <tbody className={' text-center font-bold p-2 uppercase text-sm '}>
-                                {renderBody()}
-                            </tbody>
-                        </table>
+
+                    <table className={'col-span-3 border border-white p-2 bg-gray-700 w-80'} id='employee'>
+                        <thead className={' text-center font-bold p-2 uppercase text-sm '} >
+                            <tr>{renderHeader()}</tr>
+                        </thead>
+                        <tbody className={' text-center font-bold p-2 uppercase text-sm '}>
+                            {renderBody()}
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
@@ -72,5 +73,5 @@ const PortfolioBox = () => {
 }
 
 
-    
+
 export default PortfolioBox;
