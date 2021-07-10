@@ -12,11 +12,9 @@ const PortfolioBox = () => {
     }, [])
 
     const getData = async () => {
-
         const response = await axios.get(URL)
         setPortfolio(response.data)
     }
-
     const removeData = (id) => {
 
         axios.delete(`${URL}/${id}`).then(res => {
@@ -24,7 +22,6 @@ const PortfolioBox = () => {
             setPortfolio(del)
         })
     }
-
     const renderHeader = () => {
         let headerElement = ['id', 'Symbol', 'Quantity', 'Price', 'Sell']
 
@@ -32,7 +29,6 @@ const PortfolioBox = () => {
             return <th key={index}>{key.toUpperCase()}</th>
         })
     }
-
     const renderBody = () => {
         return portfolio && portfolio.map(({id, symbol, quantity, price }) => {
             console.log(portfolio);
