@@ -13,7 +13,7 @@ function SearchBox(props) {
     };
     const searchStock = async () => {
         console.log('search stock called')
-        let res = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/search/${stockSymbol}`)
+        let res = await fetch(`${REACT_APP_API_URL}/api/v1/search/${stockSymbol}`)
         let data = await res.json();
         console.log('data:', data)
         setResult({ symbol: stockSymbol, price: data.price});
@@ -21,7 +21,7 @@ function SearchBox(props) {
 
     const buyStock = async () => {
         let info = { symbol: result.symbol, quantity: quantity, price: result.price }
-        let res = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/portfolio`, {
+        let res = await fetch(`${REACT_APP_API_URL}/api/v1/portfolio`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
