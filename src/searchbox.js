@@ -26,7 +26,7 @@ function SearchBox(props) {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(info)
+            body:JSON.stringify(info)
         })
         let data = await res.json()
         console.log('the data is', data)

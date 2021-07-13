@@ -14,7 +14,6 @@ const PortfolioBox = () => {
         setPortfolio(data)
     };
 
-
     useEffect(() => {
        // getData()
        fetchPortfolio()
@@ -62,7 +61,7 @@ const PortfolioBox = () => {
                 <h1 className={'text-4xl text-center p-8'} id='title'>Stock Portfolio</h1>
                 <div className={'grid grid-cols-12 p-10'}>
 
-                    <table className={'col-span-3 border border-white p-2 bg-gray-700 w-80'} id='employee'>
+                    <table className={'md:col-span-5 col-span-3 border border-white p-2 bg-gray-700 w-80'} id='employee'>
                         <thead className={' text-center font-bold p-2 uppercase text-sm '} >
                             <tr>{renderHeader()}</tr>
                         </thead>
