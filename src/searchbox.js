@@ -4,9 +4,9 @@ import React, { useState} from 'react';
 function SearchBox(props) {
 
     const [stockSymbol, setStockSymbol] = useState('');
-    const [result, setResult] = useState({ symbol: '', price: ''});
+    const [result, setResult] = useState({symbol: '', price: ''});
+
     const [quantity, setQuantity] = useState();
-   
 
     const onStockSymbolChange = async (event) => {
         setStockSymbol(event.currentTarget.value)
@@ -18,7 +18,6 @@ function SearchBox(props) {
         console.log('data:', data)
         setResult({ symbol: stockSymbol, price: data.price});
     };
-
     const buyStock = async () => {
         let info = { symbol: result.symbol, quantity: quantity, price: result.price }
         let res = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/portfolio`, {
