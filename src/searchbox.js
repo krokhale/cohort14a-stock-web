@@ -1,4 +1,6 @@
 import React, { useState} from 'react';
+import {LineChart, Line, CartesianGrid, XAxis, YAxis} from 'recharts';
+
 
 
 function SearchBox(props) {
@@ -11,6 +13,18 @@ function SearchBox(props) {
     const onStockSymbolChange = async (event) => {
         setStockSymbol(event.currentTarget.value)
     };
+
+    const data = [{name: 'Page A', uv:400, pv:2400, amt:2400},...];
+    const renderLineChart = (
+        <LineChart width= {400} height= {400} data={data}>
+            <Line type="monotone" datakey='uv' stroke="#8884d8" /> 
+            <CartesianGrid stroke="#ccc" /> 
+            <XAxis datakey='name' /> 
+            <YAxis /> 
+        </LineChart>
+    );
+
+
     const searchStock = async () => {
         console.log('search stock called')
         let res = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/search/${stockSymbol}`)
@@ -35,11 +49,11 @@ function SearchBox(props) {
     };
    
     return (
-        <div className={'col-span-12 md:col-span-7 bg-gray-900 border border-white rounded-3xl h-100 p-10'}>
+        <div className={'col-span-12 md:col-span-7 bg-gray-900 border border-white rounded-2xl h-screen p-10'}>
             <div className={'grid grid-cols-12  text-white'}>
-                <div className={'col-span-12 md:col-span-6 shadow-inner'}>
+                <div className={'col-span-12 md:col-span-12 shadow-inner'}>
                     <input value={stockSymbol} onChange={onStockSymbolChange} type="search" className={'border w-2/3 p-1 rounded-r-2xl rounded-l-2xl text-black'} />
-                    <button onClick={searchStock} className={'px-4 pb-2 bg-gray-400 hover:bg-gray-700 border-white-500 text-white rounded py-2 mr-5 text-white rounded'}>Search</button>
+                    <button onClick={searchStock} className={'px-4 pb-2 bg-gray-400 hover:bg-gray-700 border-white-500 text-white rounded py-2 mr-5 m-2 text-white rounded'}>Search</button>
                 </div>
 
                 <div className={'hidden md:col-span-6 md:block'}>

@@ -56,7 +56,7 @@ const PortfolioBox = () => {
 
     return (
         <>
-            <div className={'col-span-12 md:col-span-5 border border-white rounded-3xl bg-gray-900 h-100 text-white'}>
+            <div className={'col-span-12 md:col-span-5 border border-white rounded-2xl bg-gray-900 h-screen text-white'}>
 
                 <h1 className={'text-4xl text-center p-8'} id='title'>Stock Portfolio</h1>
                 <div className={'grid grid-cols-12 p-10'}>
