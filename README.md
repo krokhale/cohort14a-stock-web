@@ -10,6 +10,8 @@
 
 ~~ Design the Portfolio box and make it look like the way it  is described in the project.
 
+## Ideas for Future Improvments
+~~ Add a charting library to display a stock result
 
 
 
